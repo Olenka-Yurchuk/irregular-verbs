@@ -3,25 +3,31 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Card, Grid, Paper } from "@mui/material";
+import { Card as MCard, Grid } from "@mui/material";
 
-const TestCard = () => {
+const Card = ({
+  level,
+  wordsAmount,
+}: {
+  level: string;
+  wordsAmount: number;
+}) => {
   return (
-    <Card elevation={3}>
+    <MCard elevation={3}>
       <CardContent>
         <Grid>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            Junior
+            {level}
           </Typography>
         </Grid>
         <Grid>
           <Typography variant="h5" component="div">
-            20 verbs
+            {wordsAmount} verbs
           </Typography>
         </Grid>
         <Grid>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            20 most common English irregular verbs
+            {wordsAmount} most common English irregular verbs
           </Typography>
         </Grid>
       </CardContent>
@@ -30,8 +36,8 @@ const TestCard = () => {
           <Button variant="contained">Exercise</Button>
         </Grid>
       </CardActions>
-    </Card>
+    </MCard>
   );
 };
 
-export default TestCard;
+export default Card;
