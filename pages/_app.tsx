@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <AppBar position="static">
             <Toolbar variant="dense">
               <Typography variant="h5" color="inherit" component="div">
-                Irregular Verbs Trainer
+                Irregular Verb Trainer
               </Typography>
             </Toolbar>
           </AppBar>
