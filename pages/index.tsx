@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <Grid>
       <Grid marginLeft="50px" marginTop="50px">
-        <Typography variant="h4">Irregular verb trainer</Typography>
+        <Typography variant="h4">Irregular verb trainer 📚</Typography>
       </Grid>
       <Grid marginLeft="50px" marginTop="35px">
         <Typography variant="h5">
@@ -19,13 +19,13 @@ const Home: NextPage = () => {
 
       <Grid container columnGap="35px" justifyContent="center" marginTop="45px">
         <Grid xs={2.5}>
-          <Card level="Beginner" wordsAmount={20} />
+          <Card level="Beginner🤞" wordsAmount={20} />
         </Grid>
         <Grid xs={2.5}>
-          <Card level="Expert" wordsAmount={50} />
+          <Card level="Expert🤘" wordsAmount={50} />
         </Grid>
         <Grid xs={2.5}>
-          <CardWithInput/>
+          <CardWithInput />
         </Grid>
       </Grid>
     </Grid>
