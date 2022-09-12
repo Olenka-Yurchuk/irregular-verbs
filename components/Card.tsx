@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Card as MCard, Grid } from "@mui/material";
+import Link from "next/link";
 
 const Card = ({
   level,
@@ -33,7 +34,11 @@ const Card = ({
       </CardContent>
       <CardActions>
         <Grid container justifyContent="center" padding="20px">
-          <Button variant="contained">Exercise</Button>
+          <Link href={`/trainer/${wordsAmount}`}>
+            <a>
+              <Button variant="contained">Exercise</Button>
+            </a>
+          </Link>
         </Grid>
       </CardActions>
     </MCard>

@@ -1,9 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 import type { NextPage } from "next";
+import Link from "next/link";
 import Card from "../components/Card";
 import CardWithInput from "../components/CardWithInput";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const router = useRouter();
   return (
     <Grid>
       <Grid marginLeft="50px" marginTop="50px">
@@ -17,7 +20,13 @@ const Home: NextPage = () => {
         </Typography>
       </Grid>
 
-      <Grid container columnGap="35px" justifyContent="center" marginTop="45px">
+      <Grid
+        container
+        columnGap="35px"
+        justifyContent="center"
+        marginTop="45px"
+        marginBottom="100px"
+      >
         <Grid xs={2.5}>
           <Card level="Beginner🤞" wordsAmount={20} />
         </Grid>
