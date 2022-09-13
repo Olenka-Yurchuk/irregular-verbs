@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import verbsReducer from "./verbs";
+import userActivitiesReducer from "./userActivities";
 
 export const store = configureStore({
   reducer: {
     verbs: verbsReducer,
+    userActivities: userActivitiesReducer,
     // posts: postsReducer,
     // comments: commentsReducer,
     // users: usersReducer,

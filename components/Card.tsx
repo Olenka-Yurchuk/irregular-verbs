@@ -5,6 +5,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Card as MCard, Grid } from "@mui/material";
 import Link from "next/link";
+import { useAppDispatch } from "../redux/hooks";
+import { setNumberOfVerbs } from "../redux/userActivities";
 
 const Card = ({
   level,
@@ -13,6 +15,11 @@ const Card = ({
   level: string;
   wordsAmount: number;
 }) => {
+  const dispatch = useAppDispatch();
+
+  const handleClick = () => {
+    dispatch(setNumberOfVerbs(wordsAmount));
+  };
   return (
     <MCard elevation={3}>
       <CardContent>
@@ -34,9 +41,11 @@ const Card = ({
       </CardContent>
       <CardActions>
         <Grid container justifyContent="center" padding="20px">
-          <Link href={`/trainer/${wordsAmount}`}>
+          <Link href={`/trainer/`}>
             <a>
-              <Button variant="contained">Exercise</Button>
+              <Button onClick={handleClick} variant="contained">
+                Exercise
+              </Button>
             </a>
           </Link>
         </Grid>

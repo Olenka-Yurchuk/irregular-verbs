@@ -1,7 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import { NextPage } from "next";
-import { useEffect, useState } from "react";
-import { getAllVerbs, Verbs } from "../../api/verbs";
 import Table from "../../components/Table";
 import { useAppSelector } from "../../redux/hooks";
 import verbs, { selectVerbsData } from "../../redux/verbs";
